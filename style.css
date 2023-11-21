@@ -141,7 +141,7 @@ nav ul li a {
 @media (max-width: 680px){
     .bg-gif {
         object-fit: none;
-        object-position: 35%;
+        object-position: 30%;
         width: 100%;
     }
     
@@ -154,6 +154,14 @@ nav ul li a {
 
     nav .logo {
         width: 50px;
+    }
+
+    .content h1 {
+        font-size: 120px;
+        color: #fff;
+        font-weight: 600;
+        transition: 0.5s;
+        cursor: default;
     }
 
 
