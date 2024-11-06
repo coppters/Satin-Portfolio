@@ -5,16 +5,26 @@ bootstrapScript.integrity = "sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCs
 bootstrapScript.crossOrigin = "anonymous";
 document.head.appendChild(bootstrapScript);
 
-// Array of background image paths
-const backgrounds = [
+// Array of background image paths for desktop
+const desktopBackgrounds = [
   './images/BG1.gif',
   './images/BG2.gif',
   './images/BG3.gif',
   './images/BG4.gif'
 ];
 
+// Array of background image paths for mobile
+const mobileBackgrounds = [
+  './images/Mobile_BG1.gif',
+  './images/Mobile_BG2.gif',
+  './images/Mobile_BG3.gif',
+  './images/Mobile_BG4.gif'
+];
+
 // Function to set a random background
 function setRandomBackground() {
+  const isMobile = window.innerWidth <= 680; // Check if screen width is for mobile
+  const backgrounds = isMobile ? mobileBackgrounds : desktopBackgrounds;
   const randomIndex = Math.floor(Math.random() * backgrounds.length);
   const randomBackground = backgrounds[randomIndex];
   document.querySelector('.bg-gif').src = randomBackground;
