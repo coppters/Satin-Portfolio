@@ -80,6 +80,12 @@ nav ul li a {
     padding: 0.5rem 1rem; /* Adjusts spacing between items */
 }
 
+.dropdown-item:hover {
+    color: #ffffff; /* Change text color */
+    background-color: #0e043c; /* Change background color */
+}
+
+
 /* Optional: Adjust the width of the dropdown to fit the content */
 .dropdown-menu {
     min-width: auto;
