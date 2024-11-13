@@ -268,5 +268,10 @@ nav ul li a {
         width: 100%;
     }
 
+    .video-container {
+        padding-bottom: 25%; /* Adjusts to a taller aspect ratio for mobile */
+        padding-top: 25%; 
+    }
+
 
 }
