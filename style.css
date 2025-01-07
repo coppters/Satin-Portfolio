@@ -24,6 +24,34 @@ body.fade-in {
     transition: opacity 0.75s ease-out;
 }
 
+/* Loading Overlay */
+#loading-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: #141020; /* Semi-transparent white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 9999; /* Ensure it's on top */
+}
+
+#loading-overlay img {
+    max-width: 30%;  /* Adjust size relative to screen */
+    height: auto;    /* Maintain aspect ratio */
+    min-width: 100px; /* Prevent too small */
+}
+
+
+/* Loading Text */
+#loading-overlay p {
+    font-size: 32px;
+    color: #333;
+    margin-top: 10px;
+}
+
+
 
 .fantasy {
     width: 100%;

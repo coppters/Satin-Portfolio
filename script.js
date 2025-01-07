@@ -49,3 +49,32 @@ document.querySelectorAll('.page-link').forEach(link => {
       }, 500); // Match this with the CSS transition duration
   });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  const loadingOverlay = document.getElementById("loading-overlay");
+  const loadingImg = document.getElementById("loading-img"); // Reference the image tag
+
+  // List of GIFs with different probabilities
+  const gifs = [
+      { src: './images/Loading1.gif', probability: 0.9 }, // Common GIF (90%)
+      { src: './images/Loading2.gif', probability: 0.1 }  // Rare GIF (10%)
+  ];
+
+  // Randomly select a GIF based on probability
+  let randomNumber = Math.random(); // Generates a number between 0 and 1
+  let selectedGif = gifs[0].src; // Default to common GIF
+
+  if (randomNumber > gifs[0].probability) {
+      selectedGif = gifs[1].src; // Use rare GIF if random number is greater than 0.9
+  }
+
+  // Set the chosen GIF
+  loadingImg.src = selectedGif;
+
+  // Simulate a loading delay
+  setTimeout(() => {
+      loadingOverlay.style.display = "none"; // Hide loading screen
+      document.getElementById("main-content").style.display = "block"; // Show main content
+  }, 2000); // Adjust time if needed
+});
+
