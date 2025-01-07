@@ -108,6 +108,12 @@ nav ul li a {
     padding: 0.5rem 1rem; /* Adjusts spacing between items */
 }
 
+.dropdown-item:hover {
+    color: #ffffff; /* Change text color */
+    background-color: #0e043c; /* Change background color */
+}
+
+
 /* Optional: Adjust the width of the dropdown to fit the content */
 .dropdown-menu {
     min-width: auto;
@@ -212,22 +218,6 @@ nav ul li a {
     width: 100%;
 }
 
-.embed-container {
-    position: relative;
-    width: 100%;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-}
-
-.embed-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 0.75rem;
-}
-
 
 @media (min-aspect-ratio: 16/9){
     .bg-gif {
@@ -288,6 +278,15 @@ nav ul li a {
         display: block;
         padding: 0.5rem 1rem;
         width: 100%;
+    }
+
+    .video-container {
+        padding-bottom: 25%; /* Adjusts to a taller aspect ratio for mobile */
+        padding-top: 25%; 
+    }
+
+    iframe {
+        height: 240px;
     }
 
 
