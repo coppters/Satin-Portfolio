@@ -1,82 +1,204 @@
+// ============ script.js (full) ============
+
+// ---------- 1) Loading overlay + link fade + bootstrap init ----------
 document.addEventListener("DOMContentLoaded", function () {
+  // 1a) Loading overlay with rare GIF
   const loadingOverlay = document.getElementById("loading-overlay");
-  const loadingImg = document.getElementById("loading-img"); // Reference the image tag
+  const loadingImg = document.getElementById("loading-img");
 
-  // List of GIFs with different probabilities
-  const gifs = [
-      { src: './images/Loading1.gif', probability: 0.9 }, // Common GIF (90%)
-      { src: './images/Loading2.gif', probability: 0.1 }  // Rare GIF (10%)
-  ];
+  if (loadingOverlay && loadingImg) {
+    const gifs = [
+      { src: "./images/Loading1.gif", probability: 0.9 },
+      { src: "./images/Loading2.gif", probability: 0.1 },
+    ];
+    const randomNumber = Math.random();
+    loadingImg.src = randomNumber > gifs[0].probability ? gifs[1].src : gifs[0].src;
 
-  // Randomly select a GIF based on probability
-  let randomNumber = Math.random(); // Generates a number between 0 and 1
-  let selectedGif = gifs[0].src; // Default to common GIF
-
-  if (randomNumber > gifs[0].probability) {
-      selectedGif = gifs[1].src; // Use rare GIF if random number is greater than 0.9
+    setTimeout(() => {
+      loadingOverlay.style.display = "none";
+      const main = document.getElementById("main-content") || document.querySelector(".fantasy");
+      if (main) main.style.display = "";
+    }, 2000);
   }
 
-  // Set the chosen GIF
-  loadingImg.src = selectedGif;
+  // 1b) Fade-out on nav click
+  document.querySelectorAll(".page-link").forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const targetUrl = event.currentTarget.href;
+      if (!targetUrl) return;
+      event.preventDefault();
+      document.body.classList.add("fade-out");
+      setTimeout(() => (window.location.href = targetUrl), 500); // match CSS transition
+    });
+  });
 
-  // Simulate a loading delay
-  setTimeout(() => {
-      loadingOverlay.style.display = "none"; // Hide loading screen
-      document.getElementById("main-content").style.display = "block"; // Show main content
-  }, 2000); // Adjust time if needed
+  // 1c) After DOM is ready, ensure Bootstrap then init gallery
+  ensureBootstrap(initSimpleGallery);
 });
 
-// Load Bootstrap from CDN
-const bootstrapScript = document.createElement('script');
-bootstrapScript.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js";
-bootstrapScript.integrity = "sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL";
-bootstrapScript.crossOrigin = "anonymous";
-document.head.appendChild(bootstrapScript);
+// ---------- 2) Backgrounds: random only on index.html ----------
+(function setupBackgrounds() {
+  const desktopBackgrounds = [
+    "./images/BG1.gif",
+    "./images/BG2.gif",
+    "./images/BG3.gif",
+    "./images/BG4.gif",
+  ];
+  const mobileBackgrounds = [
+    "./images/Mobile_BG1.gif",
+    "./images/Mobile_BG2.gif",
+    "./images/Mobile_BG3.gif",
+    "./images/Mobile_BG4.gif",
+  ];
 
-// Array of background image paths for desktop
-const desktopBackgrounds = [
-  './images/BG1.gif',
-  './images/BG2.gif',
-  './images/BG3.gif',
-  './images/BG4.gif'
-];
+  function isIndexPage() {
+    const p = window.location.pathname;
+    // supports "/", "/index.html", or "/folder/index.html"
+    return p === "/" || /\/index\.html?$/.test(p);
+  }
 
-// Array of background image paths for mobile
-const mobileBackgrounds = [
-  './images/Mobile_BG1.gif',
-  './images/Mobile_BG2.gif',
-  './images/Mobile_BG3.gif',
-  './images/Mobile_BG4.gif'
-];
+  function setBackground() {
+    const target = document.querySelector(".bg-gif") || document.querySelector(".space");
+    if (!target) return;
 
-// Function to set a random background
-function setRandomBackground() {
-  const isMobile = window.innerWidth <= 680; // Check if screen width is for mobile
-  const backgrounds = isMobile ? mobileBackgrounds : desktopBackgrounds;
-  const randomIndex = Math.floor(Math.random() * backgrounds.length);
-  const randomBackground = backgrounds[randomIndex];
-  document.querySelector('.bg-gif').src = randomBackground;
+    if (isIndexPage()) {
+      const isMobile = window.innerWidth <= 680;
+      const backgrounds = isMobile ? mobileBackgrounds : desktopBackgrounds;
+      const randomIndex = Math.floor(Math.random() * backgrounds.length);
+      target.src = backgrounds[randomIndex];
+    } else {
+      // all non-index pages use Space.gif
+      target.src = "./images/Space.gif";
+    }
+  }
+
+  window.addEventListener("load", () => {
+    document.body.classList.add("fade-in");
+    setBackground();
+  });
+})();
+
+// ---------- 3) Simple Gallery bootstrap guard ----------
+function ensureBootstrap(cb) {
+  if (window.bootstrap && typeof window.bootstrap.Modal === "function") return cb();
+
+  // If a bootstrap bundle tag exists, hook into it
+  const existing = document.querySelector('script[src*="bootstrap.bundle"]');
+  if (existing) {
+    existing.addEventListener?.("load", cb);
+    // tiny fallback in case it was already loaded
+    setTimeout(() => (window.bootstrap ? cb() : null), 100);
+    return;
+  }
+
+  // Otherwise, load it (harmless if also present in HTML)
+  const s = document.createElement("script");
+  s.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js";
+  s.crossOrigin = "anonymous";
+  s.addEventListener("load", cb);
+  document.head.appendChild(s);
 }
 
-// Apply fade-in effect on page load and set random background
-window.addEventListener('load', () => {
-  document.body.classList.add('fade-in');
-  setRandomBackground();
-});
+// ---------- 4) Simple Gallery: tabs + thumbnails + lightbox ----------
+function initSimpleGallery() {
+  // Load gallery data from galleryList.js if present
+  const SG_ITEMS = window.SG_ITEMS || [];
 
-// Apply fade-out effect on link click, then redirect
-document.querySelectorAll('.page-link').forEach(link => {
-  link.addEventListener('click', (event) => {
-      event.preventDefault(); // Prevent immediate navigation
-      const targetUrl = event.currentTarget.href;
-      document.body.classList.add('fade-out');
+  const sgTabs = document.getElementById("sgTabs");
+  const sgTabContent = document.getElementById("sgTabContent");
+  const modalEl = document.getElementById("sgLightbox");
 
-      // Delay navigation until fade-out is complete
-      setTimeout(() => {
-          window.location.href = targetUrl;
-      }, 500); // Match this with the CSS transition duration
+  if (!sgTabs || !sgTabContent || !modalEl) return; // no gallery found
+
+  // Group items by category
+  const grouped = SG_ITEMS.reduce((m, i) => ((m[i.category] ||= []).push(i), m), {});
+  const categories = Object.keys(grouped);
+  const slug = (t) => "sg-" + t.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+  // Tabs
+  sgTabs.innerHTML = categories
+    .map(
+      (c, i) => `
+      <li class="nav-item" role="presentation">
+        <button class="nav-link ${i ? "" : "active"}"
+                id="${slug(c)}-tab"
+                data-bs-toggle="pill"
+                data-bs-target="#${slug(c)}"
+                type="button"
+                role="tab"
+                aria-controls="${slug(c)}"
+                aria-selected="${!i}">
+          ${c}
+        </button>
+      </li>`
+    )
+    .join("");
+
+  // Panes
+  sgTabContent.innerHTML = categories
+    .map((c, i) => {
+      const cards = grouped[c]
+        .map(
+          (item, k) => `
+          <figure class="sg-card m-0" data-category="${c}" data-index="${k}">
+            <img class="sg-thumb sg-fade" alt="${escapeHtml(item.title)}" loading="lazy" src="${escapeAttr(item.thumb)}">
+            <figcaption class="card-body p-2">
+              <div class="sg-title h6 m-0">${escapeHtml(item.title)}</div>
+            </figcaption>
+          </figure>`
+        )
+        .join("");
+      return `
+        <div class="tab-pane fade ${i ? "" : "show active"}"
+             id="${slug(c)}"
+             role="tabpanel"
+             aria-labelledby="${slug(c)}-tab"
+             tabindex="0">
+          <div class="sg-grid">${cards}</div>
+        </div>`;
+    })
+    .join("");
+
+  // Lightbox (Bootstrap)
+  const modal = new bootstrap.Modal(modalEl);
+  const sgLbImg = document.getElementById("sgLbImg");
+  const sgLbTitle = document.getElementById("sgLbTitle");
+
+  document.addEventListener("click", (e) => {
+    const fig = e.target.closest("figure.sg-card");
+    if (!fig) return;
+    const category = fig.getAttribute("data-category");
+    const index = +fig.getAttribute("data-index");
+    const item = (grouped[category] || [])[index];
+    if (!item) return;
+
+    if (sgLbImg) {
+      sgLbImg.src = item.full || item.thumb;
+      sgLbImg.alt = item.title || "Artwork";
+    }
+    if (sgLbTitle) sgLbTitle.textContent = item.title || "Preview";
+    modal.show();
   });
-});
 
+  // Fade-in thumbnails + broken path logging
+  document.querySelectorAll("img.sg-thumb").forEach((img) => {
+    if (img.complete) img.classList.add("is-loaded");
+    img.addEventListener("load", () => img.classList.add("is-loaded"));
+    img.addEventListener("error", () =>
+      console.warn("Missing image:", img.getAttribute("src"))
+    );
+  });
 
-
+  // Helpers (scoped to gallery init)
+  function escapeHtml(str = "") {
+    return String(str)
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
+  }
+  function escapeAttr(str = "") {
+    return escapeHtml(str).replaceAll("`", "&#096;");
+  }
+}

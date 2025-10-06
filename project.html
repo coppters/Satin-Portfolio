@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
+  <title>Projects | coppters</title>
 
   <!-- Bootstrap -->
   <link
@@ -20,16 +20,30 @@
   <!-- Custom Styles -->
   <link href="./style.css" rel="stylesheet">
 
-  <!-- Inline Custom Layout for Project Page -->
+  <!-- Inline Page Layout -->
   <style>
     :root { --card-gap: 20px }
 
-    /* Project Section */
+    body, html {
+      height: 100%;
+      margin: 0;
+    }
+
+    .fantasy {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* === Project Section === */
     .project-section {
-      padding-top: 120px; /* Below navbar */
-      padding-bottom: 100px; /* Leave space for footer */
-      position: relative;
-      z-index: 2;
+      padding-top: 200px; /* below navbar */
+      padding-bottom: 60px;
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
     }
 
     .project-wrap {
@@ -39,6 +53,7 @@
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: var(--card-gap);
       padding: 0 20px;
+      width: 100%;
     }
 
     .project-card {
@@ -91,67 +106,56 @@
       border: none;
     }
 
-    /* Footer */
+    /* === Footer (always bottom) === */
     footer {
-      position: absolute;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
       width: 100%;
       text-align: center;
       color: #ccc;
-      padding: 10px 0;
+      padding: 12px 0;
       font-size: 0.9rem;
     }
 
-    /* Responsive Adjustments */
-    @media (max-width: 992px) {
-      .project-section {
-        padding-top: 100px;
-        padding-bottom: 80px;
-      }
-      .project-wrap {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 16px;
-        padding: 0 16px;
-      }
-      .project-card img { height: 160px; }
-      .project-card h2 { font-size: 1.2rem; }
-      .project-card p { font-size: 0.9rem; }
-    }
-
-    @media (max-width: 680px) {
-      .project-section {
-        padding-top: 90px;
-        padding-bottom: 60px;
-      }
+    /* === Responsive tweaks === */
+    @media (max-width: 768px) {
       .project-wrap {
         grid-template-columns: 1fr;
-        gap: 14px;
-        padding: 0 12px;
+        gap: 16px;
       }
+      .project-card img {
+        height: 160px;
+      }
+      .project-section {
+        padding-top: 90px;
+        padding-bottom: 100px;
+      }
+    }
+
+    @media (max-width: 480px) {
       .project-card {
         padding: 0.75rem;
       }
-      .project-card img { height: 140px; }
-      .project-card h2 { font-size: 1.1rem; }
-      .project-card p { font-size: 0.85rem; }
-      iframe { height: 180px; }
+      .project-card h2 {
+        font-size: 1.25rem;
+      }
+      .project-card p {
+        font-size: 0.85rem;
+      }
     }
   </style>
 </head>
 
 <body>
   <!-- Loading GIF Overlay -->
-  <div id="loading-overlay">
-    <img id="loading-img" src="./images/Loading1.gif" alt="Loading..."> 
-    <p>Loading, please wait...</p>
-  </div>
+<div id="loading-overlay">
+  <img id="loading-img" src="./images/Loading1.gif" alt="Loading..."> 
+  <p>Loading, please wait...</p>
+</div>
 
-    <div class="fantasy">
 
-      <img class="space" src="./images/Space_2.gif" alt="Space_2">
-        
+  <div class="fantasy">
+
+      <img class="bg-gif" src="./images/BG.gif" alt="Waiting for something AWESOME!!">
+
       <nav class="navbar navbar-dark navbar-expand-lg bg-body-transparent fixed-top">
         <div class="container-fluid">
           <a class="navbar-brand text-light fs-3 user-select-none"><img src="./images/LOGO_2.png" alt="coppters logo" class="logo"> coppters</a>
@@ -171,6 +175,7 @@
               </li>
               <li class="nav-item ms-auto ">
                 <a class="page-link nav-link text-light fs-5" href="gallery.html">Gallery</a>
+              </li>
               <li class="nav-item ms-auto d-flex align-items-center">
   <a class="page-link nav-link text-light fs-5 p-0 d-flex align-items-center" href="https://vgen.co/coppters" style="height:40px;">
     <img 
@@ -180,6 +185,8 @@
     >
   </a>
 </li>
+
+
               <li class="nav-item ms-auto">
                 <ul class="nav row-md-4 justify-content-end list-unstyled d-flex">
                   <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/coppters"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
@@ -206,63 +213,40 @@
         </div>
       </nav>
 
-        <div class="album py-5">
-          <div class="container custom-box">
-      
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img src="./images/danceGame.png" class="card-img-top" alt="danceGame">
-                  <div class="card-body">
-                    <p class="card-text text-dark">Enjoy dancing but remember the last Pattern!! This game making from HTML, CSS and JS.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="https://coppters.itch.io/dance-pattern-game" class="btn btn-lg btn-outline-primary">Play</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img src="./images/memoryGame.jpg" class="card-img-top" alt="memoryGame">
-                  <div class="card-body">
-                    <p class="card-text text-dark">Let's pair the Waifu card!! This game making from HTML, CSS and JS.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="https://coppters.itch.io/memory-game" class="btn btn-lg btn-outline-primary">Play</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <!-- Project Section -->
+    <section class="project-section">
+      <div class="project-wrap">
 
-              <div class="col">
-                <div class="card shadow-sm">
-                  <img src="./images/foodRandom.png" class="card-img-top" alt="foodRandom">
-                  <div class="card-body">
-                    <p class="card-text text-dark"> Are you not know what to eat? This game can help you!! This game making from HTML, CSS and JS.</p>
-                    <div class="d-flex justify-content-between align-items-center">
-                      <div class="btn-group">
-                        <a href="https://coppters.itch.io/random-food" class="btn btn-lg btn-outline-primary">Play</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="project-card">
+          <img src="./images/foodRandom.png" alt="Random Food Game">
+          <h2>Random Food Game</h2>
+          <p>Hungry but can’t decide what to eat?<br>
+          This mini-game picks a random dish for you!</p>
+          <a href="https://coppters.github.io/Random-Food-App/" class="btn btn-outline-light">Play</a>
         </div>
-      
-      
-      
-       
 
-    <!-- Footer -->
-    <footer class="justify-content-between align-items-center position-absolute bottom-0 start-50 translate-middle-x mb-2 mt-2">
+        <div class="project-card">
+          <img src="./images/danceGame.png" alt="Dance Pattern Game">
+          <h2>Dance Pattern Game</h2>
+          <p>Follow the beat and remember the moves!<br>
+          A simple rhythm challenge built with JS.</p>
+          <a href="https://coppters.github.io/Dance-Pattern-Game/" class="btn btn-outline-light">Play</a>
+        </div>
+
+        <div class="project-card">
+          <h2>Memory Game</h2>
+          <iframe src="https://itch.io/embed/2918516?linkback=true">
+            <a href="https://coppters.itch.io/memory-game">Memory Game by coppters</a>
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer (fixed bottom like others) -->
+    <footer>
       <div class="container">
-        <span class="mb-5 text-body-light user-select-none">© 2025 coppters</span>
+        <span class="text-body-light user-select-none">© 2025 coppters</span>
       </div>
     </footer>
   </div>
