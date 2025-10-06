@@ -275,12 +275,14 @@ nav ul li a {
       border: none;
     }
 
-.footer {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
+    /* === Footer (always bottom) === */
+    .footer {
+      width: 100%;
+      text-align: center;
+      color: #ccc;
+      padding: 12px 0;
+      font-size: 0.9rem;
+    }
 
 .custom-box {
     width: 100%;
