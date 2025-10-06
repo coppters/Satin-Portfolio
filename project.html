@@ -1,18 +1,147 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
-     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <title>Project</title>
-  <link href="./style.css" rel="stylesheet">
-</head>
-<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
 
+  <!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    crossorigin="anonymous"
+  />
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link href="./style.css" rel="stylesheet">
+
+  <!-- Inline Custom Layout for Project Page -->
+  <style>
+    :root { --card-gap: 20px }
+
+    /* Project Section */
+    .project-section {
+      padding-top: 120px; /* Below navbar */
+      padding-bottom: 100px; /* Leave space for footer */
+      position: relative;
+      z-index: 2;
+    }
+
+    .project-wrap {
+      max-width: 1100px;
+      margin-inline: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--card-gap);
+      padding: 0 20px;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 1rem;
+      text-align: center;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.4);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+    }
+
+    .project-card h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+      line-height: 1.4;
+      margin-bottom: 1rem;
+    }
+
+    .project-card a.btn {
+      font-size: 0.9rem;
+      padding: 8px 20px;
+      border-radius: 30px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 220px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    /* Footer */
+    footer {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 992px) {
+      .project-section {
+        padding-top: 100px;
+        padding-bottom: 80px;
+      }
+      .project-wrap {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 16px;
+        padding: 0 16px;
+      }
+      .project-card img { height: 160px; }
+      .project-card h2 { font-size: 1.2rem; }
+      .project-card p { font-size: 0.9rem; }
+    }
+
+    @media (max-width: 680px) {
+      .project-section {
+        padding-top: 90px;
+        padding-bottom: 60px;
+      }
+      .project-wrap {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 0 12px;
+      }
+      .project-card {
+        padding: 0.75rem;
+      }
+      .project-card img { height: 140px; }
+      .project-card h2 { font-size: 1.1rem; }
+      .project-card p { font-size: 0.85rem; }
+      iframe { height: 180px; }
+    }
+  </style>
+</head>
+
+<body>
   <!-- Loading GIF Overlay -->
   <div id="loading-overlay">
     <img id="loading-img" src="./images/Loading1.gif" alt="Loading..."> 
@@ -21,109 +150,99 @@
 
     <div class="fantasy">
 
-        <img class="space" src="./images/Space.gif" alt="space">
-          
-        <nav class="navbar navbar-dark navbar-expand-lg bg-body-transparent fixed-top">
-          <div class="container-fluid">
-            <a class="navbar-brand text-light fs-3 user-select-none"><img src="./images/LOGO_2.png" alt="coppters logo" class="logo"> coppters</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-              <ul class="navbar-nav ms-auto">
-                <li class="nav-item ms-auto">
-                  <a class="page-link nav-link active text-light fs-5" aria-current="page" href="index.html">Home</a>
-                </li>
-                <li class="nav-item ms-auto ">
-                  <a class="page-link nav-link text-light fs-5" href="profile.html">Profile</a>
-                </li>
-                <li class="nav-item ms-auto ">
-                  <a class="page-link nav-link text-light fs-5" href="project.html">Project</a>
-                </li>
-                <li class="nav-item dropdown ms-auto">
-                  <a class="nav-link dropdown-toggle text-light fs-5" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Gallery
-                  </a>
-                  <ul class="dropdown-menu ms-auto align-items-center">
-                    <li><a class="page-link dropdown-item" href="cyberpunk.html">Cyberpunk</a></li>
-                    <li><a class="page-link dropdown-item" href="japanese.html">Japanese</a></li>
-                    <li><a class="page-link dropdown-item" href="game.html">Game</a></li>
-                    <li><a class="page-link dropdown-item" href="anime.html">Anime</a></li>
-                    <li><a class="page-link dropdown-item" href="commission.html">Commission</a></li>
-                    <li><a class="page-link dropdown-item" href="nft.html">NFTs</a></li>
-                    <li><a class="page-link dropdown-item" href="musicvideo.html">MV</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item ms-auto ">
-                  <a class="page-link nav-link text-light fs-5" href="price.html">Price</a>
-                </li>
-                <li class="nav-item ms-auto">
-                  <ul class="nav row-md-4 justify-content-end list-unstyled d-flex">
-                    <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/coppters"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
-                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
-                    </svg></a></li>
-                    <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/mynara.art/"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
-                    </svg></a></li>
-                    <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/mynara.art"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
-                    </svg></a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-
-        <div class="col-xl-5 text-center bg-body-tertiary rounded-3">
-            <img src="./images/foodRandom.png" class="d-block w-100 mb-2 rounded-3" alt="foodRandom">
-            <h1 class="text-body-emphasis fs-1">Random Food Game</h1>
-            <p class="col-lg-8 mx-auto fs-5 text-muted">
-              Are you hungry but not know what to eat?</br>  
-              This game can help you figure it out!!</br>
-              This game making from HTML, CSS and JS.
-            </p>
-            <div class="d-inline-flex gap-2 mb-5">
-              <a href="https://coppters.github.io/Random-Food-App/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Let's Play</a>
-            </div>
-        </div>
-
-        <div class="col-xl-5 text-center bg-body-tertiary rounded-3">
-          <img src="./images/danceGame.png" class="d-block w-100 mb-2 rounded-3" alt="foodRandom">
-          <h1 class="text-body-emphasis fs-1">Dance Pattern Game</h1>
-          <p class="col-lg-8 mx-auto fs-5 text-muted">
-            Enjoy dancing with me but not forget the last Pattern!!</br>
-            This game making from HTML, CSS and JS.
-          </p>
-          <div class="d-inline-flex gap-2 mb-5">
-            <a href="https://coppters.github.io/Dance-Pattern-Game/" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Let's Play</a>
-          </div>
-        </div>
-
-        <div class="col-xl-5 text-center bg-body-tertiary rounded-3">
-          <h1 class="text-body-emphasis fs-1">Memory Game</h1>
-          <div class="embed-container mb-5">
-              <iframe frameborder="0" src="https://itch.io/embed/2918516?linkback=true">
-                  <a href="https://coppters.itch.io/memory-game">Memory Game by coppters</a>
-              </iframe>
-          </div>
-      </div>
-      
-      
-      
-       
-
+      <img class="space" src="./images/Space_2.gif" alt="Space_2">
         
+      <nav class="navbar navbar-dark navbar-expand-lg bg-body-transparent fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light fs-3 user-select-none"><img src="./images/LOGO_2.png" alt="coppters logo" class="logo"> coppters</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item ms-auto">
+                <a class="page-link nav-link active text-light fs-5" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item ms-auto ">
+                <a class="page-link nav-link text-light fs-5" href="profile.html">Profile</a>
+              </li>
+              <li class="nav-item ms-auto ">
+                <a class="page-link nav-link text-light fs-5" href="project.html">Project</a>
+              </li>
+              <li class="nav-item ms-auto ">
+                <a class="page-link nav-link text-light fs-5" href="gallery.html">Gallery</a>
+              <li class="nav-item ms-auto d-flex align-items-center">
+  <a class="page-link nav-link text-light fs-5 p-0 d-flex align-items-center" href="https://vgen.co/coppters" style="height:40px;">
+    <img 
+      src="./icon/Ocean button.png" 
+      alt="Price" 
+      class="nav-img-btn"
+    >
+  </a>
+</li>
+              <li class="nav-item ms-auto">
+                <ul class="nav row-md-4 justify-content-end list-unstyled d-flex">
+                  <li class="ms-3"><a class="text-body-secondary" href="https://twitter.com/coppters"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
+                    <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                  </svg></a></li>
+                  <li class="ms-3"><a class="text-body-secondary" href="https://www.instagram.com/mynara.art/"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                    <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+                  </svg></a></li>
+                  <li class="ms-3"><a class="text-body-secondary" href="https://www.facebook.com/mynara.art"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                    <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+                  </svg></a></li>
+                  <li class="ms-3">
+                    <a class="text-body-secondary" href="https://www.youtube.com/@coppters" target="_blank" rel="noopener noreferrer">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-youtube" viewBox="0 0 16 16">
+                        <path d="M8.051 1.999c-1.717.011-3.437.09-5.15.234C1.165 2.327.396 3.095.234 4.158A29.74 29.74 0 0 0 0 8.06c.004 1.317.049 2.634.234 3.941.162 1.063.931 1.83 1.867 1.925a75.05 75.05 0 0 0 5.95.234c2.007-.004 4.014-.049 6.021-.234 1.064-.096 1.83-.862 1.992-1.925.188-1.307.23-2.624.234-3.941a29.74 29.74 0 0 0-.234-3.902c-.162-1.063-.928-1.831-1.992-1.926a75.05 75.05 0 0 0-6.021-.233c-.604 0-1.21 0-1.816.004zm-1.38 3.793 4.566 2.268-4.566 2.268V5.792z"/>
+                      </svg>
+                    </a>
+                  </li>
 
-            <footer class="justify-content-between align-items-center position-absolute bottom-0 start-50 translate-middle-x mb-2 mt-2">
-              <div class="container">
-                <span class="mb-5 text-body-light user-select-none">© 2023 coppters</span>
-              </div>
-            </footer>
-            
-    </div>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
 
-    <script src="script.js"></script>
+    <!-- Project Section -->
+    <section class="project-section">
+      <div class="project-wrap">
 
+        <div class="project-card">
+          <img src="./images/foodRandom.png" alt="Random Food Game">
+          <h2>Random Food Game</h2>
+          <p>Hungry but can’t decide what to eat?<br>This mini-game picks a random dish for you!</p>
+          <a href="https://coppters.github.io/Random-Food-App/" class="btn btn-outline-light">Play</a>
+        </div>
+
+        <div class="project-card">
+          <img src="./images/danceGame.png" alt="Dance Pattern Game">
+          <h2>Dance Pattern Game</h2>
+          <p>Follow the beat and remember the moves!<br>A simple rhythm challenge built with JS.</p>
+          <a href="https://coppters.github.io/Dance-Pattern-Game/" class="btn btn-outline-light">Play</a>
+        </div>
+
+        <div class="project-card">
+          <h2>Memory Game</h2>
+          <iframe src="https://itch.io/embed/2918516?linkback=true">
+            <a href="https://coppters.itch.io/memory-game">Memory Game by coppters</a>
+          </iframe>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="justify-content-between align-items-center position-absolute bottom-0 start-50 translate-middle-x mb-2 mt-2">
+      <div class="container">
+        <span class="mb-5 text-body-light user-select-none">© 2025 coppters</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
