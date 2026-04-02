@@ -6,6 +6,12 @@ window.SG_ITEMS = [
         "full": "./gallery/anime/86.gif"
     },
     {
+        "title": "ChineseNewYear_Mask",
+        "category": "Anime",
+        "thumb": "./gallery/anime/ChineseNewYear_Mask.png",
+        "full": "./gallery/anime/ChineseNewYear_Mask.png"
+    },
+    {
         "title": "Cynthia",
         "category": "Anime",
         "thumb": "./gallery/anime/Cynthia.png",
@@ -64,6 +70,12 @@ window.SG_ITEMS = [
         "category": "Commission",
         "thumb": "./gallery/commission/AE86.gif",
         "full": "./gallery/commission/AE86.gif"
+    },
+    {
+        "title": "ArcherGirl_Revise",
+        "category": "Commission",
+        "thumb": "./gallery/commission/ArcherGirl_Revise.png",
+        "full": "./gallery/commission/ArcherGirl_Revise.png"
     },
     {
         "title": "AzuresRemoulade",
@@ -126,6 +138,12 @@ window.SG_ITEMS = [
         "full": "./gallery/commission/TwoGirls.gif"
     },
     {
+        "title": "unknowndemonnnn",
+        "category": "Commission",
+        "thumb": "./gallery/commission/unknowndemonnnn.gif",
+        "full": "./gallery/commission/unknowndemonnnn.gif"
+    },
+    {
         "title": "ARCADE",
         "category": "Cyberpunk",
         "thumb": "./gallery/cyberpunk/ARCADE.gif",
@@ -148,6 +166,12 @@ window.SG_ITEMS = [
         "category": "Cyberpunk",
         "thumb": "./gallery/cyberpunk/Cyberpunk_BRB.gif",
         "full": "./gallery/cyberpunk/Cyberpunk_BRB.gif"
+    },
+    {
+        "title": "DigitVT_CoffeeEXE_BRB",
+        "category": "Cyberpunk",
+        "thumb": "./gallery/cyberpunk/DigitVT_CoffeeEXE_BRB.gif",
+        "full": "./gallery/cyberpunk/DigitVT_CoffeeEXE_BRB.gif"
     },
     {
         "title": "Fishey",
@@ -180,6 +204,12 @@ window.SG_ITEMS = [
         "full": "./gallery/fanart/LunaSnow.png"
     },
     {
+        "title": "MonTo",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/MonTo.png",
+        "full": "./gallery/fanart/MonTo.png"
+    },
+    {
         "title": "Pheonix",
         "category": "Fanart",
         "thumb": "./gallery/fanart/Pheonix.png",
@@ -190,6 +220,18 @@ window.SG_ITEMS = [
         "category": "Fanart",
         "thumb": "./gallery/fanart/Psylocke.png",
         "full": "./gallery/fanart/Psylocke.png"
+    },
+    {
+        "title": "Robin",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Robin.png",
+        "full": "./gallery/fanart/Robin.png"
+    },
+    {
+        "title": "Sabrina",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Sabrina.png",
+        "full": "./gallery/fanart/Sabrina.png"
     },
     {
         "title": "Sue",
@@ -306,10 +348,10 @@ window.SG_ITEMS = [
         "full": "./gallery/japanese/Beach.gif"
     },
     {
-        "title": "Garden",
+        "title": "garden",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/Garden.gif",
-        "full": "./gallery/japanese/Garden.gif"
+        "thumb": "./gallery/japanese/garden.gif",
+        "full": "./gallery/japanese/garden.gif"
     },
     {
         "title": "Night",
@@ -318,16 +360,16 @@ window.SG_ITEMS = [
         "full": "./gallery/japanese/Night.gif"
     },
     {
-        "title": "Onsen",
+        "title": "onsen",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/Onsen.gif",
-        "full": "./gallery/japanese/Onsen.gif"
+        "thumb": "./gallery/japanese/onsen.gif",
+        "full": "./gallery/japanese/onsen.gif"
     },
     {
-        "title": "Ramen",
+        "title": "ramen",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/Ramen.gif",
-        "full": "./gallery/japanese/Ramen.gif"
+        "thumb": "./gallery/japanese/ramen.gif",
+        "full": "./gallery/japanese/ramen.gif"
     },
     {
         "title": "SwiftBlade",
@@ -402,10 +444,34 @@ window.SG_ITEMS = [
         "full": "./gallery/streamer/CampFire_2.gif"
     },
     {
+        "title": "Exmaple_Asphalte0",
+        "category": "Streamer",
+        "thumb": "./gallery/streamer/Exmaple_Asphalte0.gif",
+        "full": "./gallery/streamer/Exmaple_Asphalte0.gif"
+    },
+    {
         "title": "Gamer",
         "category": "Streamer",
         "thumb": "./gallery/streamer/Gamer.gif",
         "full": "./gallery/streamer/Gamer.gif"
+    },
+    {
+        "title": "Leesib_Small",
+        "category": "Streamer",
+        "thumb": "./gallery/streamer/Leesib_Small.gif",
+        "full": "./gallery/streamer/Leesib_Small.gif"
+    },
+    {
+        "title": "miaow_Inka_sample",
+        "category": "Streamer",
+        "thumb": "./gallery/streamer/miaow_Inka_sample.gif",
+        "full": "./gallery/streamer/miaow_Inka_sample.gif"
+    },
+    {
+        "title": "mssykix",
+        "category": "Streamer",
+        "thumb": "./gallery/streamer/mssykix.gif",
+        "full": "./gallery/streamer/mssykix.gif"
     },
     {
         "title": "PNGTuber_1",
@@ -418,6 +484,30 @@ window.SG_ITEMS = [
         "category": "Streamer",
         "thumb": "./gallery/streamer/PNGTuber_2.gif",
         "full": "./gallery/streamer/PNGTuber_2.gif"
+    },
+    {
+        "title": "Present_Kitsunessa",
+        "category": "Streamer",
+        "thumb": "./gallery/streamer/Present_Kitsunessa.gif",
+        "full": "./gallery/streamer/Present_Kitsunessa.gif"
+    },
+    {
+        "title": "SheepieMD",
+        "category": "Streamer",
+        "thumb": "./gallery/streamer/SheepieMD.gif",
+        "full": "./gallery/streamer/SheepieMD.gif"
+    },
+    {
+        "title": "SheepieMD_Night",
+        "category": "Streamer",
+        "thumb": "./gallery/streamer/SheepieMD_Night.gif",
+        "full": "./gallery/streamer/SheepieMD_Night.gif"
+    },
+    {
+        "title": "Small_AkumaMiko",
+        "category": "Streamer",
+        "thumb": "./gallery/streamer/Small_AkumaMiko.gif",
+        "full": "./gallery/streamer/Small_AkumaMiko.gif"
     },
     {
         "title": "StartingSoon",
