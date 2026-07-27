@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet Satin Wichapha, the artist behind Coppters—an architect, pixel artist, animator, and game creator.">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <title>Profile</title>
+  <title>About Satin Wichapha | Coppters</title>
   <link href="./style.css" rel="stylesheet">
 </head>
 <body>
@@ -19,9 +20,9 @@
     <p>Loading, please wait...</p>
   </div>
 
-    <div class="fantasy">
+    <div class="fantasy profile-page">
 
-      <img class="space" src="./images/Space_2.gif" alt="Space_2">
+      <img class="space" src="./images/Space_2.gif" alt="" aria-hidden="true">
         
       <nav class="navbar navbar-dark navbar-expand-lg bg-body-transparent fixed-top">
         <div class="container-fluid">
@@ -43,10 +44,10 @@
               <li class="nav-item ms-auto ">
                 <a class="page-link nav-link text-light fs-5" href="gallery.html">Gallery</a>
               <li class="nav-item ms-auto d-flex align-items-center">
-  <a class="page-link nav-link text-light fs-5 p-0 d-flex align-items-center" href="https://vgen.co/coppters" style="height:40px;">
+  <a class="page-link nav-link text-light fs-5 p-0 d-flex align-items-center" href="commission.html" style="height:40px;">
     <img 
       src="./icon/Ocean button.png" 
-      alt="Price" 
+      alt="Commissions"
       class="nav-img-btn"
     >
   </a>
@@ -76,118 +77,64 @@
           </div>
         </div>
       </nav>
-      <div class="container">
-        <div class="row">
-            <div class="col position-relative text-center bg-body-transparent">
-                <img class="profile-picture" src="./images/profile.gif" alt="profile-picture">
-                <h1 class="text-info">Satin Wichapha</h1>
-                <p class="col-lg-8 mx-auto fs-5 text-emphasis">
-                    I'm an architect who has a passion for anime and gaming, enjoys creating pixel art, and is currently diving into the world of coding.
-                </p>
+      <main class="profile-main">
+        <section class="profile-hero" aria-labelledby="profile-title">
+          <div class="profile-portrait-wrap">
+            <div class="profile-orbit" aria-hidden="true"></div>
+            <img class="profile-portrait" src="./images/profile.gif" alt="Animated pixel portrait of Satin Wichapha">
+            <span class="profile-availability"><i aria-hidden="true"></i> Available for commissions</span>
+          </div>
+          <div class="profile-intro">
+            <p class="hero-kicker">The artist behind Coppters</p>
+            <h1 id="profile-title">Satin<br>Wichapha</h1>
+            <p class="profile-roles">Architect · Pixel Artist · Animator · Game Creator</p>
+            <p class="profile-lead">I combine architectural thinking with a love of anime, games, and visual storytelling to create expressive characters and atmospheric pixel worlds.</p>
+            <div class="profile-actions">
+              <a class="commission-button commission-button-primary" href="commission.html">Work with me</a>
+              <a class="commission-button commission-button-secondary" href="gallery.html">Explore my art</a>
             </div>
-        </div>
-    
-        <div class="row">
-            <div class="col-4 border border-3 rounded flex">
-                <div class="p-1 d-flex flex-column position-relative">
-                    <strong class="d-inline-flex mb-2 text-info fs-5">Work</strong>
-                    <h3 class="mb-0">Architect</h3>
-                    <div class="mb-1 text-secondary">Archiart, AOA, Freelance</div>
-                    <h3 class="mb-0">Pixel Artist</h3>
-                    <div class="mb-1 text-secondary">Freelance, Fiverr, Others</div>
-                </div>
-            </div>
-    
-            <div class="col-4 border border-3 rounded flex">
-                <div class="p-1 d-flex flex-column position-relative">
-                    <strong class="d-inline-flex mb-2 text-info fs-5">Language</strong>
-                    <h3 class="mb-0">Thai, English</h3>
-                    <div class="mb-1 text-secondary">Expert</div>
-                    <h3 class="mb-0">Japanese, Spanish</h3>
-                    <div class="mb-1 text-secondary">Beginner</div>
-                </div>
-            </div>
-    
-            <div class="col-4 border border-3 rounded flex">
-                <div class="p-1 d-flex flex-column position-relative">
-                    <strong class="d-inline-flex mb-2 text-info fs-5">Hobby</strong>
-                    <h3 class="mb-0">Game</h3>
-                    <div class="mb-1 text-secondary">Final Fantasy, Dota2, etc.</div>
-                    <h3 class="mb-0">Anime</h3>
-                    <div class="mb-1 text-secondary">JJK, One Piece, Bleach, etc.</div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Skills Section -->
-        <div class="row">
-            <div class="col skills">
-                <h2 class="text-info">Skills</h2>
-                <div class="skill">
-                    <span>CREATIVITY</span>
-                    <div class="progress-bar"><div class="progress" style="width: 98%;"></div></div>
-                </div>
-                <div class="skill">
-                    <span>CODING</span>
-                    <div class="progress-bar"><div class="progress" style="width: 55%;"></div></div>
-                </div>
-                <div class="skill">
-                    <span>LANGUAGES</span>
-                    <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
-                </div>
-                
-                <!-- Add more skills as needed -->
-            </div>
-        </div>
-    </div>
-    
+          </div>
+        </section>
 
+        <section class="profile-section" aria-labelledby="story-title">
+          <div class="section-heading"><p class="section-number">01</p><div><h2 id="story-title">Designing worlds, one pixel at a time</h2></div></div>
+          <div class="profile-story-grid">
+            <p class="profile-story-lead">My background in architecture shapes how I think about composition, space, lighting, and atmosphere.</p>
+            <div class="profile-story-copy">
+              <p>Pixel art became the place where my interests naturally meet: structured design, anime-inspired characters, game environments, and animation. I enjoy turning a client’s idea into a scene that feels lived-in, memorable, and full of personality.</p>
+              <p>Alongside commission work, I explore coding and game development to make my art more interactive and bring original worlds to life.</p>
             </div>
-              <!-- <div class="border border-3 d-inline-block rounded flex m-1">
-                <div class="col p-4 d-flex flex-column position-relative">
-                  <strong class="d-inline-flex mb-2 text-info fs-5">Education</strong>
-                  <h3 class="mb-0">School</h3>
-                  <div class="mb-1 text-secondary">Khon Kaen Wittayayon</div>
-                  <h3 class="mb-0">Architecture</h3>
-                  <div class="mb-1 text-secondary">Khon Kaen University</div>
-                </div>
-              </div>
+          </div>
+        </section>
 
-              <div class="border border-3 d-inline-block rounded flex m-1">
-                <div class="col p-4 d-flex flex-column position-relative">
-                  <strong class="d-inline-flex mb-2 text-info fs-5">Work</strong>
-                  <h3 class="mb-0">Architect</h3>
-                  <div class="mb-1 text-secondary">Archiart, AOA, Freelance</div>
-                  <h3 class="mb-0">Pixel Artist</h3>
-                  <div class="mb-1 text-secondary">Freelance, Fiverr, Others</div>
-                </div>
-              </div>
+        <section class="profile-section" aria-labelledby="expertise-title">
+          <div class="section-heading"><p class="section-number">02</p><div><h2 id="expertise-title">What I bring to a project</h2><p>Creative direction grounded in design, storytelling, and production experience.</p></div></div>
+          <div class="expertise-grid">
+            <article class="expertise-card"><span class="expertise-index">01</span><h3>Pixel art & animation</h3><p>Anime-style portraits, expressive sprites, looping animations, and detailed environmental scenes.</p></article>
+            <article class="expertise-card"><span class="expertise-index">02</span><h3>Architectural composition</h3><p>Strong perspective, spatial design, lighting, and environmental storytelling informed by professional architecture work.</p></article>
+            <article class="expertise-card"><span class="expertise-index">03</span><h3>Games & interactive ideas</h3><p>Growing experience in coding and game creation, connecting artwork with playful interactive experiences.</p></article>
+          </div>
+        </section>
 
-              <div class="border border-3 d-inline-block rounded flex m-1">
-                <div class="col p-4 d-flex flex-column position-relative">
-                  <strong class="d-inline-flex mb-2 text-info fs-5">Language</strong>
-                  <h3 class="mb-0">Thai, English</h3>
-                  <div class="mb-1 text-secondary">Expert</div>
-                  <h3 class="mb-0">Japanese, Spain</h3>
-                  <div class="mb-1 text-secondary">Beginner</div>
-                </div>
-              </div>
+        <section class="profile-section" aria-labelledby="details-title">
+          <div class="section-heading"><p class="section-number">03</p><div><h2 id="details-title">A little more about me</h2></div></div>
+          <div class="profile-details-grid">
+            <article><p class="detail-label">Experience</p><h3>Architecture & freelance art</h3><p>Architecture experience with Archiart and AOA, alongside independent pixel-art commission work.</p></article>
+            <article><p class="detail-label">Languages</p><h3>Thai & English</h3><p>Working proficiency in Thai and English, with beginner-level Japanese and Spanish.</p></article>
+            <article><p class="detail-label">Inspired by</p><h3>Games, anime & imagined places</h3><p>Final Fantasy, Dota 2, Jujutsu Kaisen, One Piece, Bleach, and the atmosphere of memorable game worlds.</p></article>
+          </div>
+        </section>
 
-              <div class="border border-3 d-inline-block rounded flex m-1">
-                <div class="col p-4 d-flex flex-column position-relative">
-                  <strong class="d-inline-flex mb-2 text-info fs-5">Hobby</strong>
-                  <h3 class="mb-0">Game</h3>
-                  <div class="mb-1 text-secondary">Final Fantasy, Dota2 etc</div>
-                  <h3 class="mb-0">Anime</h3>
-                  <div class="mb-1 text-secondary">JJK, One Piece, Bleach etc</div>
-                </div>
-              </div> -->
+        <section class="profile-final">
+          <div><p class="hero-kicker">Let’s create something memorable</p><h2>Have a pixel world in mind?</h2></div>
+          <a class="commission-button commission-button-primary" href="commission.html">View commissions</a>
+        </section>
+      </main>
+
 
           
-          <footer class="justify-content-between align-items-center position-absolute bottom-0 start-50 translate-middle-x mb-2 mt-2">
-            <div class="container">
-              <span class="mb-5 text-body-light user-select-none">© 2025 coppters</span>
-            </div>
+          <footer class="site-footer">
+              <p class="site-copyright">&copy; <span class="copyright-year">2026</span> Coppters</p>
           </footer>
           
     </div>

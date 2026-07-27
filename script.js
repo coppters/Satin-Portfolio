@@ -1,38 +1,38 @@
 // ============ script.js (full) ============
 
-// ---------- 1) Loading overlay + link fade + bootstrap init ----------
+// ---------- 1) Fast startup + shared navigation + bootstrap init ----------
 document.addEventListener("DOMContentLoaded", function () {
-  // 1a) Loading overlay with rare GIF
   const loadingOverlay = document.getElementById("loading-overlay");
-  const loadingImg = document.getElementById("loading-img");
+  if (loadingOverlay) loadingOverlay.hidden = true;
 
-  if (loadingOverlay && loadingImg) {
-    const gifs = [
-      { src: "./images/Loading1.gif", probability: 0.9 },
-      { src: "./images/Loading2.gif", probability: 0.1 },
-    ];
-    const randomNumber = Math.random();
-    loadingImg.src = randomNumber > gifs[0].probability ? gifs[1].src : gifs[0].src;
-
-    setTimeout(() => {
-      loadingOverlay.style.display = "none";
-      const main = document.getElementById("main-content") || document.querySelector(".fantasy");
-      if (main) main.style.display = "";
-    }, 2000);
-  }
-
-  // 1b) Fade-out on nav click
-  document.querySelectorAll(".page-link").forEach((link) => {
-    link.addEventListener("click", (event) => {
-      const targetUrl = event.currentTarget.href;
-      if (!targetUrl) return;
-      event.preventDefault();
-      document.body.classList.add("fade-out");
-      setTimeout(() => (window.location.href = targetUrl), 500); // match CSS transition
-    });
+  const currentPage = window.location.pathname.split("/").pop() || "index.html";
+  document.querySelectorAll(".navbar .nav-link[href]").forEach((link) => {
+    const linkPage = new URL(link.href, window.location.href).pathname.split("/").pop();
+    const isCurrent = linkPage === currentPage;
+    link.classList.toggle("active", isCurrent);
+    if (isCurrent) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
   });
 
-  // 1c) After DOM is ready, ensure Bootstrap then init gallery
+  const socialLabels = {
+    "twitter.com": "Follow Coppters on X",
+    "instagram.com": "Follow Coppters on Instagram",
+    "facebook.com": "Follow Coppters on Facebook",
+    "youtube.com": "Watch Coppters on YouTube",
+  };
+  document.querySelectorAll('a[href^="http"]').forEach((link) => {
+    const label = Object.entries(socialLabels).find(([domain]) => link.href.includes(domain));
+    if (label) {
+      link.setAttribute("aria-label", label[1]);
+      link.setAttribute("target", "_blank");
+      link.setAttribute("rel", "noopener noreferrer");
+    }
+  });
+
+  document.querySelectorAll(".copyright-year").forEach((year) => {
+    year.textContent = new Date().getFullYear();
+  });
+
   ensureBootstrap(initSimpleGallery);
 });
 
@@ -112,7 +112,15 @@ function initSimpleGallery() {
 
   // Group items by category
   const grouped = SG_ITEMS.reduce((m, i) => ((m[i.category] ||= []).push(i), m), {});
-  const categories = Object.keys(grouped);
+  const categoryPriority = ["Commission", "Streamer", "Game", "Cyberpunk", "Japanese"];
+  const categories = Object.keys(grouped).sort((a, b) => {
+    const aIndex = categoryPriority.indexOf(a);
+    const bIndex = categoryPriority.indexOf(b);
+    if (aIndex === -1 && bIndex === -1) return a.localeCompare(b);
+    if (aIndex === -1) return 1;
+    if (bIndex === -1) return -1;
+    return aIndex - bIndex;
+  });
   const slug = (t) => "sg-" + t.toLowerCase().replace(/[^a-z0-9]+/g, "-");
 
   // Tabs
@@ -140,8 +148,9 @@ function initSimpleGallery() {
       const cards = grouped[c]
         .map(
           (item, k) => `
-          <figure class="sg-card m-0" data-category="${c}" data-index="${k}">
+          <figure class="sg-card m-0" data-category="${c}" data-index="${k}" data-preview="${escapeAttr(item.full || item.thumb)}" data-media-type="${escapeAttr(item.type || "image")}" role="button" tabindex="0" aria-label="View ${escapeAttr(item.title)}">
             <img class="sg-thumb sg-fade" alt="${escapeHtml(item.title)}" loading="lazy" src="${escapeAttr(item.thumb)}">
+            <video class="sg-thumb-video" muted loop playsinline preload="none" aria-hidden="true"></video>
             <figcaption class="card-body p-2">
               <div class="sg-title h6 m-0">${escapeHtml(item.title)}</div>
             </figcaption>
@@ -159,25 +168,90 @@ function initSimpleGallery() {
     })
     .join("");
 
+  const previewCards = document.querySelectorAll("figure.sg-card");
+  const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
+
+  function startCardPreview(card) {
+    if (!canHover || card.dataset.mediaType !== "video") return;
+    const video = card.querySelector(".sg-thumb-video");
+    if (!video) return;
+    if (!video.src) {
+      video.src = card.dataset.preview;
+      video.load();
+    }
+    card.classList.add("is-previewing");
+    video.play().catch(() => {});
+  }
+
+  function stopCardPreview(card) {
+    const video = card.querySelector(".sg-thumb-video");
+    if (!video) return;
+    video.pause();
+    video.currentTime = 0;
+    card.classList.remove("is-previewing");
+  }
+
+  previewCards.forEach((card) => {
+    card.addEventListener("mouseenter", () => startCardPreview(card));
+    card.addEventListener("mouseleave", () => stopCardPreview(card));
+    card.addEventListener("focus", () => startCardPreview(card));
+    card.addEventListener("blur", () => stopCardPreview(card));
+  });
+
   // Lightbox (Bootstrap)
   const modal = new bootstrap.Modal(modalEl);
   const sgLbImg = document.getElementById("sgLbImg");
+  const sgLbVideo = document.getElementById("sgLbVideo");
   const sgLbTitle = document.getElementById("sgLbTitle");
 
-  document.addEventListener("click", (e) => {
-    const fig = e.target.closest("figure.sg-card");
+  function openGalleryItem(fig) {
     if (!fig) return;
     const category = fig.getAttribute("data-category");
     const index = +fig.getAttribute("data-index");
     const item = (grouped[category] || [])[index];
     if (!item) return;
 
-    if (sgLbImg) {
+    const isVideo = item.type === "video" || /\.webm(?:$|\?)/i.test(item.full || "");
+    if (isVideo && sgLbVideo) {
+      if (sgLbImg) {
+        sgLbImg.classList.add("d-none");
+        sgLbImg.removeAttribute("src");
+      }
+      sgLbVideo.classList.remove("d-none");
+      sgLbVideo.src = item.full;
+      sgLbVideo.load();
+      sgLbVideo.play().catch(() => {});
+    } else if (sgLbImg) {
+      if (sgLbVideo) {
+        sgLbVideo.pause();
+        sgLbVideo.removeAttribute("src");
+        sgLbVideo.classList.add("d-none");
+      }
+      sgLbImg.classList.remove("d-none");
       sgLbImg.src = item.full || item.thumb;
       sgLbImg.alt = item.title || "Artwork";
     }
     if (sgLbTitle) sgLbTitle.textContent = item.title || "Preview";
     modal.show();
+  }
+
+  document.addEventListener("click", (e) => {
+    openGalleryItem(e.target.closest("figure.sg-card"));
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key !== "Enter" && e.key !== " ") return;
+    const fig = e.target.closest("figure.sg-card");
+    if (!fig) return;
+    e.preventDefault();
+    openGalleryItem(fig);
+  });
+
+  modalEl.addEventListener("hidden.bs.modal", () => {
+    if (!sgLbVideo) return;
+    sgLbVideo.pause();
+    sgLbVideo.removeAttribute("src");
+    sgLbVideo.load();
   });
 
   // Fade-in thumbnails + broken path logging
