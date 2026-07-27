@@ -2,607 +2,820 @@ window.SG_ITEMS = [
     {
         "title": "86",
         "category": "Anime",
-        "thumb": "./gallery/anime/86.gif",
-        "full": "./gallery/anime/86.gif"
+        "thumb": "./gallery/anime/86.thumb.webp",
+        "full": "./gallery/anime/86.webm",
+        "type": "video"
     },
     {
-        "title": "ChineseNewYear_Mask",
+        "title": "Alt Shizuku",
+        "category": "Anime",
+        "thumb": "./gallery/anime/Alt_Shizuku.png",
+        "full": "./gallery/anime/Alt_Shizuku.png",
+        "type": "image"
+    },
+    {
+        "title": "ChineseNewYear Mask",
         "category": "Anime",
         "thumb": "./gallery/anime/ChineseNewYear_Mask.png",
-        "full": "./gallery/anime/ChineseNewYear_Mask.png"
-    },
-    {
-        "title": "Cynthia",
-        "category": "Anime",
-        "thumb": "./gallery/anime/Cynthia.png",
-        "full": "./gallery/anime/Cynthia.png"
+        "full": "./gallery/anime/ChineseNewYear_Mask.png",
+        "type": "image"
     },
     {
         "title": "Frieren",
         "category": "Anime",
-        "thumb": "./gallery/anime/Frieren.gif",
-        "full": "./gallery/anime/Frieren.gif"
+        "thumb": "./gallery/anime/Frieren.thumb.webp",
+        "full": "./gallery/anime/Frieren.webm",
+        "type": "video"
     },
     {
         "title": "Genryusai",
         "category": "Anime",
         "thumb": "./gallery/anime/Genryusai.png",
-        "full": "./gallery/anime/Genryusai.png"
+        "full": "./gallery/anime/Genryusai.png",
+        "type": "image"
     },
     {
         "title": "Kikyo",
         "category": "Anime",
-        "thumb": "./gallery/anime/Kikyo.gif",
-        "full": "./gallery/anime/Kikyo.gif"
+        "thumb": "./gallery/anime/Kikyo.thumb.webp",
+        "full": "./gallery/anime/Kikyo.webm",
+        "type": "video"
     },
     {
-        "title": "Marnie",
+        "title": "Machi",
         "category": "Anime",
-        "thumb": "./gallery/anime/Marnie.png",
-        "full": "./gallery/anime/Marnie.png"
+        "thumb": "./gallery/anime/Machi.png",
+        "full": "./gallery/anime/Machi.png",
+        "type": "image"
     },
     {
         "title": "Naruto",
         "category": "Anime",
-        "thumb": "./gallery/anime/Naruto.gif",
-        "full": "./gallery/anime/Naruto.gif"
-    },
-    {
-        "title": "Red",
-        "category": "Anime",
-        "thumb": "./gallery/anime/Red.png",
-        "full": "./gallery/anime/Red.png"
-    },
-    {
-        "title": "Serena",
-        "category": "Anime",
-        "thumb": "./gallery/anime/Serena.png",
-        "full": "./gallery/anime/Serena.png"
-    },
-    {
-        "title": "Shampoo",
-        "category": "Anime",
-        "thumb": "./gallery/anime/Shampoo.png",
-        "full": "./gallery/anime/Shampoo.png"
+        "thumb": "./gallery/anime/Naruto.thumb.webp",
+        "full": "./gallery/anime/Naruto.webm",
+        "type": "video"
     },
     {
         "title": "AE86",
         "category": "Commission",
-        "thumb": "./gallery/commission/AE86.gif",
-        "full": "./gallery/commission/AE86.gif"
+        "thumb": "./gallery/commission/AE86.thumb.webp",
+        "full": "./gallery/commission/AE86.webm",
+        "type": "video"
     },
     {
-        "title": "ArcherGirl_Revise",
+        "title": "All",
+        "category": "Commission",
+        "thumb": "./gallery/commission/All.thumb.webp",
+        "full": "./gallery/commission/All.webm",
+        "type": "video"
+    },
+    {
+        "title": "ArcherGirl Revise",
         "category": "Commission",
         "thumb": "./gallery/commission/ArcherGirl_Revise.png",
-        "full": "./gallery/commission/ArcherGirl_Revise.png"
+        "full": "./gallery/commission/ArcherGirl_Revise.png",
+        "type": "image"
     },
     {
         "title": "AzuresRemoulade",
         "category": "Commission",
-        "thumb": "./gallery/commission/AzuresRemoulade.gif",
-        "full": "./gallery/commission/AzuresRemoulade.gif"
+        "thumb": "./gallery/commission/AzuresRemoulade.thumb.webp",
+        "full": "./gallery/commission/AzuresRemoulade.webm",
+        "type": "video"
     },
     {
         "title": "Cherry Star",
         "category": "Commission",
-        "thumb": "./gallery/commission/Cherry Star.gif",
-        "full": "./gallery/commission/Cherry Star.gif"
+        "thumb": "./gallery/commission/Cherry Star.thumb.webp",
+        "full": "./gallery/commission/Cherry Star.webm",
+        "type": "video"
+    },
+    {
+        "title": "Day",
+        "category": "Commission",
+        "thumb": "./gallery/commission/Day.thumb.webp",
+        "full": "./gallery/commission/Day.webm",
+        "type": "video"
     },
     {
         "title": "Evening in Europa",
         "category": "Commission",
-        "thumb": "./gallery/commission/Evening in Europa.gif",
-        "full": "./gallery/commission/Evening in Europa.gif"
+        "thumb": "./gallery/commission/Evening in Europa.thumb.webp",
+        "full": "./gallery/commission/Evening in Europa.webm",
+        "type": "video"
     },
     {
         "title": "HackerRoom",
         "category": "Commission",
-        "thumb": "./gallery/commission/HackerRoom.gif",
-        "full": "./gallery/commission/HackerRoom.gif"
+        "thumb": "./gallery/commission/HackerRoom.thumb.webp",
+        "full": "./gallery/commission/HackerRoom.webm",
+        "type": "video"
     },
     {
         "title": "KancanDressingGame",
         "category": "Commission",
-        "thumb": "./gallery/commission/KancanDressingGame.gif",
-        "full": "./gallery/commission/KancanDressingGame.gif"
+        "thumb": "./gallery/commission/KancanDressingGame.thumb.webp",
+        "full": "./gallery/commission/KancanDressingGame.webm",
+        "type": "video"
     },
     {
         "title": "Lilithblahaj",
         "category": "Commission",
-        "thumb": "./gallery/commission/Lilithblahaj.gif",
-        "full": "./gallery/commission/Lilithblahaj.gif"
+        "thumb": "./gallery/commission/Lilithblahaj.thumb.webp",
+        "full": "./gallery/commission/Lilithblahaj.webm",
+        "type": "video"
+    },
+    {
+        "title": "LunaX",
+        "category": "Commission",
+        "thumb": "./gallery/commission/LunaX.thumb.webp",
+        "full": "./gallery/commission/LunaX.webm",
+        "type": "video"
     },
     {
         "title": "Mars",
         "category": "Commission",
-        "thumb": "./gallery/commission/Mars.gif",
-        "full": "./gallery/commission/Mars.gif"
+        "thumb": "./gallery/commission/Mars.thumb.webp",
+        "full": "./gallery/commission/Mars.webm",
+        "type": "video"
+    },
+    {
+        "title": "miaow Inka",
+        "category": "Commission",
+        "thumb": "./gallery/commission/miaow_Inka.thumb.webp",
+        "full": "./gallery/commission/miaow_Inka.webm",
+        "type": "video"
     },
     {
         "title": "RyleighScene",
         "category": "Commission",
-        "thumb": "./gallery/commission/RyleighScene.gif",
-        "full": "./gallery/commission/RyleighScene.gif"
+        "thumb": "./gallery/commission/RyleighScene.thumb.webp",
+        "full": "./gallery/commission/RyleighScene.webm",
+        "type": "video"
+    },
+    {
+        "title": "SARA3",
+        "category": "Commission",
+        "thumb": "./gallery/commission/SARA3.thumb.webp",
+        "full": "./gallery/commission/SARA3.webm",
+        "type": "video"
+    },
+    {
+        "title": "SeanVr1",
+        "category": "Commission",
+        "thumb": "./gallery/commission/SeanVr1.thumb.webp",
+        "full": "./gallery/commission/SeanVr1.webm",
+        "type": "video"
     },
     {
         "title": "SpookyForest",
         "category": "Commission",
-        "thumb": "./gallery/commission/SpookyForest.gif",
-        "full": "./gallery/commission/SpookyForest.gif"
+        "thumb": "./gallery/commission/SpookyForest.thumb.webp",
+        "full": "./gallery/commission/SpookyForest.webm",
+        "type": "video"
     },
     {
         "title": "TwoGirls",
         "category": "Commission",
-        "thumb": "./gallery/commission/TwoGirls.gif",
-        "full": "./gallery/commission/TwoGirls.gif"
+        "thumb": "./gallery/commission/TwoGirls.thumb.webp",
+        "full": "./gallery/commission/TwoGirls.webm",
+        "type": "video"
     },
     {
         "title": "unknowndemonnnn",
         "category": "Commission",
-        "thumb": "./gallery/commission/unknowndemonnnn.gif",
-        "full": "./gallery/commission/unknowndemonnnn.gif"
+        "thumb": "./gallery/commission/unknowndemonnnn.thumb.webp",
+        "full": "./gallery/commission/unknowndemonnnn.webm",
+        "type": "video"
     },
     {
         "title": "ARCADE",
         "category": "Cyberpunk",
-        "thumb": "./gallery/cyberpunk/ARCADE.gif",
-        "full": "./gallery/cyberpunk/ARCADE.gif"
+        "thumb": "./gallery/cyberpunk/ARCADE.thumb.webp",
+        "full": "./gallery/cyberpunk/ARCADE.webm",
+        "type": "video"
     },
     {
         "title": "City",
         "category": "Cyberpunk",
-        "thumb": "./gallery/cyberpunk/City.gif",
-        "full": "./gallery/cyberpunk/City.gif"
+        "thumb": "./gallery/cyberpunk/City.thumb.webp",
+        "full": "./gallery/cyberpunk/City.webm",
+        "type": "video"
     },
     {
         "title": "Coffee",
         "category": "Cyberpunk",
-        "thumb": "./gallery/cyberpunk/Coffee.gif",
-        "full": "./gallery/cyberpunk/Coffee.gif"
+        "thumb": "./gallery/cyberpunk/Coffee.thumb.webp",
+        "full": "./gallery/cyberpunk/Coffee.webm",
+        "type": "video"
     },
     {
-        "title": "Cyberpunk_BRB",
+        "title": "Cyberpunk BRB",
         "category": "Cyberpunk",
-        "thumb": "./gallery/cyberpunk/Cyberpunk_BRB.gif",
-        "full": "./gallery/cyberpunk/Cyberpunk_BRB.gif"
+        "thumb": "./gallery/cyberpunk/Cyberpunk_BRB.thumb.webp",
+        "full": "./gallery/cyberpunk/Cyberpunk_BRB.webm",
+        "type": "video"
     },
     {
-        "title": "DigitVT_CoffeeEXE_BRB",
+        "title": "DigitVT CoffeeEXE BRB",
         "category": "Cyberpunk",
-        "thumb": "./gallery/cyberpunk/DigitVT_CoffeeEXE_BRB.gif",
-        "full": "./gallery/cyberpunk/DigitVT_CoffeeEXE_BRB.gif"
+        "thumb": "./gallery/cyberpunk/DigitVT_CoffeeEXE_BRB.thumb.webp",
+        "full": "./gallery/cyberpunk/DigitVT_CoffeeEXE_BRB.webm",
+        "type": "video"
     },
     {
         "title": "Fishey",
         "category": "Cyberpunk",
-        "thumb": "./gallery/cyberpunk/Fishey.gif",
-        "full": "./gallery/cyberpunk/Fishey.gif"
+        "thumb": "./gallery/cyberpunk/Fishey.thumb.webp",
+        "full": "./gallery/cyberpunk/Fishey.webm",
+        "type": "video"
     },
     {
         "title": "NEO TOKYO",
         "category": "Cyberpunk",
-        "thumb": "./gallery/cyberpunk/NEO TOKYO.gif",
-        "full": "./gallery/cyberpunk/NEO TOKYO.gif"
+        "thumb": "./gallery/cyberpunk/NEO TOKYO.thumb.webp",
+        "full": "./gallery/cyberpunk/NEO TOKYO.webm",
+        "type": "video"
     },
     {
         "title": "Riding",
         "category": "Cyberpunk",
-        "thumb": "./gallery/cyberpunk/Riding.gif",
-        "full": "./gallery/cyberpunk/Riding.gif"
+        "thumb": "./gallery/cyberpunk/Riding.thumb.webp",
+        "full": "./gallery/cyberpunk/Riding.webm",
+        "type": "video"
+    },
+    {
+        "title": "1bit",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/1bit.png",
+        "full": "./gallery/fanart/1bit.png",
+        "type": "image"
+    },
+    {
+        "title": "Aerith",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Aerith.png",
+        "full": "./gallery/fanart/Aerith.png",
+        "type": "image"
+    },
+    {
+        "title": "Blossom",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Blossom.png",
+        "full": "./gallery/fanart/Blossom.png",
+        "type": "image"
+    },
+    {
+        "title": "Bubble",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Bubble.png",
+        "full": "./gallery/fanart/Bubble.png",
+        "type": "image"
+    },
+    {
+        "title": "Buttercup",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Buttercup.png",
+        "full": "./gallery/fanart/Buttercup.png",
+        "type": "image"
+    },
+    {
+        "title": "Elesa",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Elesa.png",
+        "full": "./gallery/fanart/Elesa.png",
+        "type": "image"
     },
     {
         "title": "EmmaFrost",
         "category": "Fanart",
         "thumb": "./gallery/fanart/EmmaFrost.png",
-        "full": "./gallery/fanart/EmmaFrost.png"
+        "full": "./gallery/fanart/EmmaFrost.png",
+        "type": "image"
+    },
+    {
+        "title": "Erika White",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Erika_White.png",
+        "full": "./gallery/fanart/Erika_White.png",
+        "type": "image"
     },
     {
         "title": "LunaSnow",
         "category": "Fanart",
         "thumb": "./gallery/fanart/LunaSnow.png",
-        "full": "./gallery/fanart/LunaSnow.png"
+        "full": "./gallery/fanart/LunaSnow.png",
+        "type": "image"
+    },
+    {
+        "title": "May W",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/May_W.png",
+        "full": "./gallery/fanart/May_W.png",
+        "type": "image"
     },
     {
         "title": "MonTo",
         "category": "Fanart",
         "thumb": "./gallery/fanart/MonTo.png",
-        "full": "./gallery/fanart/MonTo.png"
+        "full": "./gallery/fanart/MonTo.png",
+        "type": "image"
     },
     {
         "title": "Pheonix",
         "category": "Fanart",
         "thumb": "./gallery/fanart/Pheonix.png",
-        "full": "./gallery/fanart/Pheonix.png"
+        "full": "./gallery/fanart/Pheonix.png",
+        "type": "image"
     },
     {
         "title": "Psylocke",
         "category": "Fanart",
         "thumb": "./gallery/fanart/Psylocke.png",
-        "full": "./gallery/fanart/Psylocke.png"
+        "full": "./gallery/fanart/Psylocke.png",
+        "type": "image"
     },
     {
         "title": "Robin",
         "category": "Fanart",
         "thumb": "./gallery/fanart/Robin.png",
-        "full": "./gallery/fanart/Robin.png"
+        "full": "./gallery/fanart/Robin.png",
+        "type": "image"
     },
     {
         "title": "Sabrina",
         "category": "Fanart",
         "thumb": "./gallery/fanart/Sabrina.png",
-        "full": "./gallery/fanart/Sabrina.png"
+        "full": "./gallery/fanart/Sabrina.png",
+        "type": "image"
     },
     {
         "title": "Sue",
         "category": "Fanart",
         "thumb": "./gallery/fanart/Sue.png",
-        "full": "./gallery/fanart/Sue.png"
+        "full": "./gallery/fanart/Sue.png",
+        "type": "image"
+    },
+    {
+        "title": "Tifa",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Tifa.png",
+        "full": "./gallery/fanart/Tifa.png",
+        "type": "image"
+    },
+    {
+        "title": "White",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/White.png",
+        "full": "./gallery/fanart/White.png",
+        "type": "image"
     },
     {
         "title": "WindRanger",
         "category": "Fanart",
         "thumb": "./gallery/fanart/WindRanger.png",
-        "full": "./gallery/fanart/WindRanger.png"
+        "full": "./gallery/fanart/WindRanger.png",
+        "type": "image"
+    },
+    {
+        "title": "Yuffy",
+        "category": "Fanart",
+        "thumb": "./gallery/fanart/Yuffy.png",
+        "full": "./gallery/fanart/Yuffy.png",
+        "type": "image"
     },
     {
         "title": "Factory",
         "category": "Game",
-        "thumb": "./gallery/game/Factory.gif",
-        "full": "./gallery/game/Factory.gif"
+        "thumb": "./gallery/game/Factory.thumb.webp",
+        "full": "./gallery/game/Factory.webm",
+        "type": "video"
     },
     {
         "title": "FF7",
         "category": "Game",
-        "thumb": "./gallery/game/FF7.gif",
-        "full": "./gallery/game/FF7.gif"
+        "thumb": "./gallery/game/FF7.thumb.webp",
+        "full": "./gallery/game/FF7.webm",
+        "type": "video"
     },
     {
         "title": "FLying",
         "category": "Game",
-        "thumb": "./gallery/game/FLying.gif",
-        "full": "./gallery/game/FLying.gif"
+        "thumb": "./gallery/game/FLying.thumb.webp",
+        "full": "./gallery/game/FLying.webm",
+        "type": "video"
     },
     {
         "title": "MINING",
         "category": "Game",
-        "thumb": "./gallery/game/MINING.gif",
-        "full": "./gallery/game/MINING.gif"
+        "thumb": "./gallery/game/MINING.thumb.webp",
+        "full": "./gallery/game/MINING.webm",
+        "type": "video"
     },
     {
         "title": "Movement",
         "category": "Game",
-        "thumb": "./gallery/game/Movement.gif",
-        "full": "./gallery/game/Movement.gif"
+        "thumb": "./gallery/game/Movement.thumb.webp",
+        "full": "./gallery/game/Movement.webm",
+        "type": "video"
     },
     {
         "title": "Night",
         "category": "Game",
-        "thumb": "./gallery/game/Night.gif",
-        "full": "./gallery/game/Night.gif"
+        "thumb": "./gallery/game/Night.thumb.webp",
+        "full": "./gallery/game/Night.webm",
+        "type": "video"
     },
     {
         "title": "SFX",
         "category": "Game",
-        "thumb": "./gallery/game/SFX.gif",
-        "full": "./gallery/game/SFX.gif"
+        "thumb": "./gallery/game/SFX.thumb.webp",
+        "full": "./gallery/game/SFX.webm",
+        "type": "video"
     },
     {
         "title": "Silksong",
         "category": "Game",
-        "thumb": "./gallery/game/Silksong.gif",
-        "full": "./gallery/game/Silksong.gif"
+        "thumb": "./gallery/game/Silksong.thumb.webp",
+        "full": "./gallery/game/Silksong.webm",
+        "type": "video"
     },
     {
         "title": "SpriteSheet",
         "category": "Game",
-        "thumb": "./gallery/game/SpriteSheet.gif",
-        "full": "./gallery/game/SpriteSheet.gif"
+        "thumb": "./gallery/game/SpriteSheet.thumb.webp",
+        "full": "./gallery/game/SpriteSheet.webm",
+        "type": "video"
     },
     {
         "title": "TalesOfKyo",
         "category": "Game",
-        "thumb": "./gallery/game/TalesOfKyo.gif",
-        "full": "./gallery/game/TalesOfKyo.gif"
+        "thumb": "./gallery/game/TalesOfKyo.thumb.webp",
+        "full": "./gallery/game/TalesOfKyo.webm",
+        "type": "video"
     },
     {
         "title": "Underwater",
         "category": "Game",
-        "thumb": "./gallery/game/Underwater.gif",
-        "full": "./gallery/game/Underwater.gif"
+        "thumb": "./gallery/game/Underwater.thumb.webp",
+        "full": "./gallery/game/Underwater.webm",
+        "type": "video"
     },
     {
         "title": "coppters",
         "category": "Intro",
-        "thumb": "./gallery/intro/coppters.gif",
-        "full": "./gallery/intro/coppters.gif"
+        "thumb": "./gallery/intro/coppters.thumb.webp",
+        "full": "./gallery/intro/coppters.webm",
+        "type": "video"
     },
     {
         "title": "Cutscene",
         "category": "Intro",
-        "thumb": "./gallery/intro/Cutscene.gif",
-        "full": "./gallery/intro/Cutscene.gif"
+        "thumb": "./gallery/intro/Cutscene.thumb.webp",
+        "full": "./gallery/intro/Cutscene.webm",
+        "type": "video"
     },
     {
-        "title": "GibRacing_Intro",
+        "title": "GibRacing Intro",
         "category": "Intro",
-        "thumb": "./gallery/intro/GibRacing_Intro.gif",
-        "full": "./gallery/intro/GibRacing_Intro.gif"
+        "thumb": "./gallery/intro/GibRacing_Intro.thumb.webp",
+        "full": "./gallery/intro/GibRacing_Intro.webm",
+        "type": "video"
     },
     {
         "title": "100Demon",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/100Demon.gif",
-        "full": "./gallery/japanese/100Demon.gif"
+        "thumb": "./gallery/japanese/100Demon.thumb.webp",
+        "full": "./gallery/japanese/100Demon.webm",
+        "type": "video"
     },
     {
         "title": "ANATAWA",
         "category": "Japanese",
         "thumb": "./gallery/japanese/ANATAWA.jpg",
-        "full": "./gallery/japanese/ANATAWA.jpg"
+        "full": "./gallery/japanese/ANATAWA.jpg",
+        "type": "image"
     },
     {
         "title": "Beach",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/Beach.gif",
-        "full": "./gallery/japanese/Beach.gif"
+        "thumb": "./gallery/japanese/Beach.thumb.webp",
+        "full": "./gallery/japanese/Beach.webm",
+        "type": "video"
     },
     {
         "title": "garden",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/garden.gif",
-        "full": "./gallery/japanese/garden.gif"
+        "thumb": "./gallery/japanese/garden.thumb.webp",
+        "full": "./gallery/japanese/garden.webm",
+        "type": "video"
     },
     {
         "title": "Night",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/Night.gif",
-        "full": "./gallery/japanese/Night.gif"
+        "thumb": "./gallery/japanese/Night.thumb.webp",
+        "full": "./gallery/japanese/Night.webm",
+        "type": "video"
     },
     {
         "title": "onsen",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/onsen.gif",
-        "full": "./gallery/japanese/onsen.gif"
+        "thumb": "./gallery/japanese/onsen.thumb.webp",
+        "full": "./gallery/japanese/onsen.webm",
+        "type": "video"
     },
     {
         "title": "ramen",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/ramen.gif",
-        "full": "./gallery/japanese/ramen.gif"
+        "thumb": "./gallery/japanese/ramen.thumb.webp",
+        "full": "./gallery/japanese/ramen.webm",
+        "type": "video"
     },
     {
         "title": "SwiftBlade",
         "category": "Japanese",
-        "thumb": "./gallery/japanese/SwiftBlade.gif",
-        "full": "./gallery/japanese/SwiftBlade.gif"
+        "thumb": "./gallery/japanese/SwiftBlade.thumb.webp",
+        "full": "./gallery/japanese/SwiftBlade.webm",
+        "type": "video"
     },
     {
         "title": "Library",
         "category": "Nft",
-        "thumb": "./gallery/nft/Library.gif",
-        "full": "./gallery/nft/Library.gif"
+        "thumb": "./gallery/nft/Library.thumb.webp",
+        "full": "./gallery/nft/Library.webm",
+        "type": "video"
     },
     {
         "title": "Rosentica",
         "category": "Nft",
         "thumb": "./gallery/nft/Rosentica.png",
-        "full": "./gallery/nft/Rosentica.png"
+        "full": "./gallery/nft/Rosentica.png",
+        "type": "image"
     },
     {
         "title": "Running",
         "category": "Nft",
-        "thumb": "./gallery/nft/Running.gif",
-        "full": "./gallery/nft/Running.gif"
+        "thumb": "./gallery/nft/Running.thumb.webp",
+        "full": "./gallery/nft/Running.webm",
+        "type": "video"
     },
     {
         "title": "shop",
         "category": "Nft",
-        "thumb": "./gallery/nft/shop.gif",
-        "full": "./gallery/nft/shop.gif"
+        "thumb": "./gallery/nft/shop.thumb.webp",
+        "full": "./gallery/nft/shop.webm",
+        "type": "video"
     },
     {
         "title": "SPOOKY KGF",
         "category": "Nft",
-        "thumb": "./gallery/nft/SPOOKY KGF.gif",
-        "full": "./gallery/nft/SPOOKY KGF.gif"
+        "thumb": "./gallery/nft/SPOOKY KGF.thumb.webp",
+        "full": "./gallery/nft/SPOOKY KGF.webm",
+        "type": "video"
     },
     {
         "title": "Suwhanabhum",
         "category": "Nft",
-        "thumb": "./gallery/nft/Suwhanabhum.gif",
-        "full": "./gallery/nft/Suwhanabhum.gif"
+        "thumb": "./gallery/nft/Suwhanabhum.thumb.webp",
+        "full": "./gallery/nft/Suwhanabhum.webm",
+        "type": "video"
     },
     {
         "title": "Coppters",
         "category": "Skeb",
         "thumb": "./gallery/skeb/Coppters.png",
-        "full": "./gallery/skeb/Coppters.png"
+        "full": "./gallery/skeb/Coppters.png",
+        "type": "image"
     },
     {
         "title": "Lilith",
         "category": "Skeb",
         "thumb": "./gallery/skeb/Lilith.png",
-        "full": "./gallery/skeb/Lilith.png"
+        "full": "./gallery/skeb/Lilith.png",
+        "type": "image"
+    },
+    {
+        "title": "Mug",
+        "category": "Skeb",
+        "thumb": "./gallery/skeb/Mug.png",
+        "full": "./gallery/skeb/Mug.png",
+        "type": "image"
+    },
+    {
+        "title": "Mug 2",
+        "category": "Skeb",
+        "thumb": "./gallery/skeb/Mug_2.png",
+        "full": "./gallery/skeb/Mug_2.png",
+        "type": "image"
     },
     {
         "title": "BRB",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/BRB.gif",
-        "full": "./gallery/streamer/BRB.gif"
+        "thumb": "./gallery/streamer/BRB.thumb.webp",
+        "full": "./gallery/streamer/BRB.webm",
+        "type": "video"
     },
     {
         "title": "CampFire",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/CampFire.gif",
-        "full": "./gallery/streamer/CampFire.gif"
+        "thumb": "./gallery/streamer/CampFire.thumb.webp",
+        "full": "./gallery/streamer/CampFire.webm",
+        "type": "video"
     },
     {
-        "title": "CampFire_2",
+        "title": "CampFire 2",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/CampFire_2.gif",
-        "full": "./gallery/streamer/CampFire_2.gif"
+        "thumb": "./gallery/streamer/CampFire_2.thumb.webp",
+        "full": "./gallery/streamer/CampFire_2.webm",
+        "type": "video"
     },
     {
-        "title": "Exmaple_Asphalte0",
+        "title": "Exmaple Asphalte0",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/Exmaple_Asphalte0.gif",
-        "full": "./gallery/streamer/Exmaple_Asphalte0.gif"
+        "thumb": "./gallery/streamer/Exmaple_Asphalte0.thumb.webp",
+        "full": "./gallery/streamer/Exmaple_Asphalte0.webm",
+        "type": "video"
     },
     {
         "title": "Gamer",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/Gamer.gif",
-        "full": "./gallery/streamer/Gamer.gif"
+        "thumb": "./gallery/streamer/Gamer.thumb.webp",
+        "full": "./gallery/streamer/Gamer.webm",
+        "type": "video"
     },
     {
-        "title": "Leesib_Small",
+        "title": "Leesib Small",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/Leesib_Small.gif",
-        "full": "./gallery/streamer/Leesib_Small.gif"
+        "thumb": "./gallery/streamer/Leesib_Small.thumb.webp",
+        "full": "./gallery/streamer/Leesib_Small.webm",
+        "type": "video"
     },
     {
-        "title": "miaow_Inka_sample",
+        "title": "miaow Inka sample",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/miaow_Inka_sample.gif",
-        "full": "./gallery/streamer/miaow_Inka_sample.gif"
+        "thumb": "./gallery/streamer/miaow_Inka_sample.thumb.webp",
+        "full": "./gallery/streamer/miaow_Inka_sample.webm",
+        "type": "video"
     },
     {
         "title": "mssykix",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/mssykix.gif",
-        "full": "./gallery/streamer/mssykix.gif"
+        "thumb": "./gallery/streamer/mssykix.thumb.webp",
+        "full": "./gallery/streamer/mssykix.webm",
+        "type": "video"
     },
     {
-        "title": "PNGTuber_1",
+        "title": "PNGTuber 1",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/PNGTuber_1.gif",
-        "full": "./gallery/streamer/PNGTuber_1.gif"
+        "thumb": "./gallery/streamer/PNGTuber_1.thumb.webp",
+        "full": "./gallery/streamer/PNGTuber_1.webm",
+        "type": "video"
     },
     {
-        "title": "PNGTuber_2",
+        "title": "PNGTuber 2",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/PNGTuber_2.gif",
-        "full": "./gallery/streamer/PNGTuber_2.gif"
+        "thumb": "./gallery/streamer/PNGTuber_2.thumb.webp",
+        "full": "./gallery/streamer/PNGTuber_2.webm",
+        "type": "video"
     },
     {
-        "title": "Present_Kitsunessa",
+        "title": "Present Kitsunessa",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/Present_Kitsunessa.gif",
-        "full": "./gallery/streamer/Present_Kitsunessa.gif"
+        "thumb": "./gallery/streamer/Present_Kitsunessa.thumb.webp",
+        "full": "./gallery/streamer/Present_Kitsunessa.webm",
+        "type": "video"
     },
     {
         "title": "SheepieMD",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/SheepieMD.gif",
-        "full": "./gallery/streamer/SheepieMD.gif"
+        "thumb": "./gallery/streamer/SheepieMD.thumb.webp",
+        "full": "./gallery/streamer/SheepieMD.webm",
+        "type": "video"
     },
     {
-        "title": "SheepieMD_Night",
+        "title": "SheepieMD Night",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/SheepieMD_Night.gif",
-        "full": "./gallery/streamer/SheepieMD_Night.gif"
+        "thumb": "./gallery/streamer/SheepieMD_Night.thumb.webp",
+        "full": "./gallery/streamer/SheepieMD_Night.webm",
+        "type": "video"
     },
     {
-        "title": "Small_AkumaMiko",
+        "title": "Small AkumaMiko",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/Small_AkumaMiko.gif",
-        "full": "./gallery/streamer/Small_AkumaMiko.gif"
+        "thumb": "./gallery/streamer/Small_AkumaMiko.thumb.webp",
+        "full": "./gallery/streamer/Small_AkumaMiko.webm",
+        "type": "video"
     },
     {
         "title": "StartingSoon",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/StartingSoon.gif",
-        "full": "./gallery/streamer/StartingSoon.gif"
+        "thumb": "./gallery/streamer/StartingSoon.thumb.webp",
+        "full": "./gallery/streamer/StartingSoon.webm",
+        "type": "video"
     },
     {
-        "title": "StartingSoon_2",
+        "title": "StartingSoon 2",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/StartingSoon_2.gif",
-        "full": "./gallery/streamer/StartingSoon_2.gif"
+        "thumb": "./gallery/streamer/StartingSoon_2.thumb.webp",
+        "full": "./gallery/streamer/StartingSoon_2.webm",
+        "type": "video"
     },
     {
         "title": "StartSoon",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/StartSoon.gif",
-        "full": "./gallery/streamer/StartSoon.gif"
+        "thumb": "./gallery/streamer/StartSoon.thumb.webp",
+        "full": "./gallery/streamer/StartSoon.webm",
+        "type": "video"
     },
     {
-        "title": "Streamer_ED",
+        "title": "Streamer ED",
         "category": "Streamer",
-        "thumb": "./gallery/streamer/Streamer_ED.gif",
-        "full": "./gallery/streamer/Streamer_ED.gif"
+        "thumb": "./gallery/streamer/Streamer_ED.thumb.webp",
+        "full": "./gallery/streamer/Streamer_ED.webm",
+        "type": "video"
     },
     {
         "title": "BookStore",
         "category": "Vibes",
         "thumb": "./gallery/vibes/BookStore.jpg",
-        "full": "./gallery/vibes/BookStore.jpg"
+        "full": "./gallery/vibes/BookStore.jpg",
+        "type": "image"
     },
     {
         "title": "Forest",
         "category": "Vibes",
-        "thumb": "./gallery/vibes/Forest.gif",
-        "full": "./gallery/vibes/Forest.gif"
+        "thumb": "./gallery/vibes/Forest.thumb.webp",
+        "full": "./gallery/vibes/Forest.webm",
+        "type": "video"
     },
     {
         "title": "GameCenter",
         "category": "Vibes",
         "thumb": "./gallery/vibes/GameCenter.jpg",
-        "full": "./gallery/vibes/GameCenter.jpg"
+        "full": "./gallery/vibes/GameCenter.jpg",
+        "type": "image"
     },
     {
         "title": "Garden",
         "category": "Vibes",
         "thumb": "./gallery/vibes/Garden.jpg",
-        "full": "./gallery/vibes/Garden.jpg"
+        "full": "./gallery/vibes/Garden.jpg",
+        "type": "image"
     },
     {
         "title": "GodShrine",
         "category": "Vibes",
         "thumb": "./gallery/vibes/GodShrine.jpg",
-        "full": "./gallery/vibes/GodShrine.jpg"
+        "full": "./gallery/vibes/GodShrine.jpg",
+        "type": "image"
     },
     {
         "title": "Library",
         "category": "Vibes",
         "thumb": "./gallery/vibes/Library.jpg",
-        "full": "./gallery/vibes/Library.jpg"
+        "full": "./gallery/vibes/Library.jpg",
+        "type": "image"
     },
     {
         "title": "Lonely",
         "category": "Vibes",
         "thumb": "./gallery/vibes/Lonely.jpg",
-        "full": "./gallery/vibes/Lonely.jpg"
+        "full": "./gallery/vibes/Lonely.jpg",
+        "type": "image"
     },
     {
         "title": "Rain",
         "category": "Vibes",
-        "thumb": "./gallery/vibes/Rain.gif",
-        "full": "./gallery/vibes/Rain.gif"
+        "thumb": "./gallery/vibes/Rain.thumb.webp",
+        "full": "./gallery/vibes/Rain.webm",
+        "type": "video"
     },
     {
         "title": "RamenShop",
         "category": "Vibes",
         "thumb": "./gallery/vibes/RamenShop.jpg",
-        "full": "./gallery/vibes/RamenShop.jpg"
+        "full": "./gallery/vibes/RamenShop.jpg",
+        "type": "image"
     },
     {
         "title": "Relax",
         "category": "Vibes",
         "thumb": "./gallery/vibes/Relax.jpg",
-        "full": "./gallery/vibes/Relax.jpg"
+        "full": "./gallery/vibes/Relax.jpg",
+        "type": "image"
     },
     {
         "title": "Shrine",
         "category": "Vibes",
         "thumb": "./gallery/vibes/Shrine.jpg",
-        "full": "./gallery/vibes/Shrine.jpg"
+        "full": "./gallery/vibes/Shrine.jpg",
+        "type": "image"
     },
     {
         "title": "Train",
         "category": "Vibes",
         "thumb": "./gallery/vibes/Train.png",
-        "full": "./gallery/vibes/Train.png"
+        "full": "./gallery/vibes/Train.png",
+        "type": "image"
     }
 ];

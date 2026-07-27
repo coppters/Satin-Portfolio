@@ -3,30 +3,36 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Coppters creates animated pixel art, stream visuals, game art, and atmospheric pixel scenes for clients and original projects.">
+    <meta name="theme-color" content="#0e043c">
+    <meta property="og:title" content="Coppters — Animated Pixel Artist">
+    <meta property="og:description" content="Animated pixel art for streamers, games, and original worlds. Explore selected work or commission Coppters on VGen.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://coppters.art/">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" 
      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <title>Satin Portfolio</title>
+  <title>Coppters — Animated Pixel Artist & Commission Portfolio</title>
   <link href="./style.css" rel="stylesheet">
 </head>
 <body>
 
   <!-- Loading GIF Overlay -->
-<div id="loading-overlay">
+<div id="loading-overlay" aria-hidden="true">
   <img id="loading-img" src="./images/Loading1.gif" alt="Loading..."> 
   <p>Loading, please wait...</p>
 </div>
 
 
-  <div class="fantasy">
+  <div class="fantasy home-page">
 
-      <img class="bg-gif" src="./images/BG.gif" alt="Waiting for something AWESOME!!">
+      <img class="bg-gif" src="./images/BG1.gif" alt="" aria-hidden="true">
 
       <nav class="navbar navbar-dark navbar-expand-lg bg-body-transparent fixed-top">
         <div class="container-fluid">
-          <a class="navbar-brand text-light fs-3 user-select-none"><img src="./images/LOGO_2.png" alt="coppters logo" class="logo"> coppters</a>
+          <a class="navbar-brand text-light fs-3 user-select-none" href="index.html" aria-label="Coppters home"><img src="./images/LOGO_2.png" alt="" class="logo"> coppters</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -45,10 +51,10 @@
                 <a class="page-link nav-link text-light fs-5" href="gallery.html">Gallery</a>
               </li>
               <li class="nav-item ms-auto d-flex align-items-center">
-  <a class="page-link nav-link text-light fs-5 p-0 d-flex align-items-center" href="https://vgen.co/coppters" style="height:40px;">
+  <a class="page-link nav-link text-light fs-5 p-0 d-flex align-items-center" href="commission.html" style="height:40px;">
     <img 
       src="./icon/Ocean button.png" 
-      alt="Price" 
+      alt="Commissions"
       class="nav-img-btn"
     >
   </a>
@@ -82,19 +88,21 @@
       </nav>
 
       <div class="content user-select-none">
-        <h1>Narapop</h1>
+        <p class="hero-kicker">Pixel artist · Animator · World builder</p>
+        <h1>Coppters</h1>
         <div class="intro-text">
-          <h2>Welcome to My World of Creation</h2>
-          <p>Explore my portfolio for more experiences</p>
-      </div>
-      
-        <a href="profile.html">Learn More</a>
+          <h2>Animated pixel art for streamers, games, and original worlds</h2>
+          <p>I create expressive characters, atmospheric scenes, and looping animations that make digital spaces feel alive.</p>
       </div>
 
-      <footer class="justify-content-between align-items-center position-absolute bottom-0 start-50 translate-middle-x mb-2">
-        <div class="container">
-          <span class="mb-5 text-body-light user-select-none">© 2025 coppters</span>
+        <div class="hero-actions">
+          <a class="hero-cta hero-cta-primary" href="commission.html">View commissions</a>
+          <a class="hero-cta hero-cta-secondary" href="gallery.html">Explore my work</a>
         </div>
+      </div>
+
+      <footer class="site-footer site-footer-overlay">
+        <p class="site-copyright">&copy; <span class="copyright-year">2026</span> Coppters</p>
       </footer>
     
   </div>
