@@ -39,16 +39,16 @@ document.addEventListener("DOMContentLoaded", function () {
 // ---------- 2) Backgrounds: random only on index.html ----------
 (function setupBackgrounds() {
   const desktopBackgrounds = [
-    "./images/BG1.gif",
-    "./images/BG2.gif",
-    "./images/BG3.gif",
-    "./images/BG4.gif",
+    "./images/BG1.webm",
+    "./images/BG2.webm",
+    "./images/BG3.webm",
+    "./images/BG4.webm",
   ];
   const mobileBackgrounds = [
-    "./images/Mobile_BG1.gif",
-    "./images/Mobile_BG2.gif",
-    "./images/Mobile_BG3.gif",
-    "./images/Mobile_BG4.gif",
+    "./images/Mobile_BG1.webm",
+    "./images/Mobile_BG2.webm",
+    "./images/Mobile_BG3.webm",
+    "./images/Mobile_BG4.webm",
   ];
 
   function isIndexPage() {
@@ -66,15 +66,17 @@ document.addEventListener("DOMContentLoaded", function () {
       const backgrounds = isMobile ? mobileBackgrounds : desktopBackgrounds;
       const randomIndex = Math.floor(Math.random() * backgrounds.length);
       target.src = backgrounds[randomIndex];
+      target.load?.();
+      target.play?.().catch(() => {});
     } else {
       // all non-index pages use Space.gif
       target.src = "./images/Space.gif";
     }
   }
 
+  setBackground();
   window.addEventListener("load", () => {
     document.body.classList.add("fade-in");
-    setBackground();
   });
 })();
 
